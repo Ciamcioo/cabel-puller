@@ -1,0 +1,14 @@
+Frequency = 50Hz
+Period = 0.02s = 20 000 ms 
+Stop signal = 1500
+Forward signal = 700 - 1500
+Backword max signal = 1500 - 2300
+
+duty cycle to stop = 1500/20000 * 100 = 1500/200 = 7.5%
+duty cycle to forward = 700/20000 * 100 = 700/200 = 3.5% -> FORWARD: <3.5%, 7.5%>
+duty cycle to backward = 2300/20000 * 100 = 23/2% = 11.5% -> BACKWARD: <7.5%, 11.5%>
+
+
+value for pico to stop = 65535/100 * 7.5 = 4195 
+value for pico to forward = 65535/100 * 3.5 = 2294 
+value for pico to backward = 65535/100 * 11.5 = 7537 
